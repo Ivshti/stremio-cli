@@ -1,0 +1,27 @@
+{
+  "name": "stremio-cli",
+  "version": "1.0.0",
+  "description": "CLI interface of Stremio",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Ivshti/stremio-cli.git"
+  },
+  "keywords": [
+    "stremio",
+    "cli",
+    "command",
+    "line",
+    "movies",
+    "streaming"
+  ],
+  "author": "Ivo Georgiev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ivshti/stremio-cli/issues"
+  },
+  "homepage": "https://github.com/Ivshti/stremio-cli#readme"
+}

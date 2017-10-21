@@ -1,0 +1,14 @@
+{
+	"addons": {
+		"core": [
+			"https://cinemeta.strem.io/stremioget/stremio/v1"
+		],
+		"extra": [
+			"https://netflix.strem.io/stremioget/stremio/v1"
+		]
+	},
+	"server": {
+		"defaultPort": 11470
+	},
+	"playerCmd": "mpv"
+}
