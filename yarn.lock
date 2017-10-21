@@ -28,6 +28,10 @@ once@^1.4.0:
   dependencies:
     wrappy "1"
 
+open@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/open/-/open-0.0.5.tgz#42c3e18ec95466b6bf0dc42f3a2945c3f0cad8fc"
+
 stremio-addons@^2.8.13:
   version "2.8.13"
   resolved "https://registry.yarnpkg.com/stremio-addons/-/stremio-addons-2.8.13.tgz#da719bd0f63cef8b5eb0151bbd516bc81e9f3a47"

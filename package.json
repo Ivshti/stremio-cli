@@ -26,6 +26,7 @@
   "homepage": "https://github.com/Ivshti/stremio-cli#readme",
   "dependencies": {
     "minimist": "^1.2.0",
+    "open": "^0.0.5",
     "stremio-addons": "^2.8.13"
   }
 }
