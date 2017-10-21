@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/Ivshti/stremio-cli/issues"
   },
-  "homepage": "https://github.com/Ivshti/stremio-cli#readme"
+  "homepage": "https://github.com/Ivshti/stremio-cli#readme",
+  "dependencies": {
+    "minimist": "^1.2.0"
+  }
 }
