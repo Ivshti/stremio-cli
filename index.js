@@ -52,7 +52,7 @@ searchForMeta(definition, function(err, meta) {
 	
 	// XXX Use stremio-models function streamQuery (from metadata)
 	var q = {
-		type: 'movie', // XXX FIXME
+		type: first.type,
 		id: first.id
 	}
 	if (first.imdb_id) q.imdb_id = first.imdb_id
