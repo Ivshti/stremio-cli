@@ -18,6 +18,8 @@ module.exports = function(args) {
 		definition.name = name.join(' ')
 	}
 
+	definition.inApp = argv.inApp
+
 	return definition
 }
 

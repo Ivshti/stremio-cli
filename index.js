@@ -8,6 +8,7 @@ var config = require('./stremio-conf')
 var stremio = new addons.Client()
 
 var playStream = require('./playStream')
+var open = require('open')
 
 // Enable add-ons
 var add = function(x) { stremio.add(x) }
@@ -16,6 +17,7 @@ config.addons.extra.forEach(add)
 
 // Check args
 if (! definition.name) dieWithErr('Usage: stremio-cli <name>')
+
 
 // Do the work
 function searchForMeta(def, cb)
@@ -50,6 +52,8 @@ searchForMeta(definition, function(err, meta) {
 	
 	var isExactMatch = first.name.toLowerCase() == definition.name
 	
+	if (definition.inApp) return open('http://app.strem.io/#/detail/'+first.type+'/'+first.imdb_id)
+	
 	// XXX Use stremio-models function streamQuery (from metadata)
 	var q = {
 		type: first.type,
@@ -61,6 +65,7 @@ searchForMeta(definition, function(err, meta) {
 		if (err) dieWithErr(err)
 		
 		if (! streams[0]) dieWtihErr('no stream found')
+
 		playStream(streams[0])
 	})
 })
