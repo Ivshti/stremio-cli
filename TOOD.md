@@ -1,0 +1,3 @@
+- use stremio-models
+- mpv to launch immediately rather than waiting
+- all other XXX/FIXME's
