@@ -64,7 +64,7 @@ searchForMeta(definition, function(err, meta) {
 	stremio.stream.find({ query: q }, function(err, streams) {
 		if (err) dieWithErr(err)
 		
-		if (! streams[0]) dieWtihErr('no stream found')
+		if (! streams[0]) dieWithErr('no stream found')
 
 		playStream(streams[0])
 	})
