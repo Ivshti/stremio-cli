@@ -60,6 +60,10 @@ searchForMeta(definition, function(err, meta) {
 		id: first.id
 	}
 	if (first.imdb_id) q.imdb_id = first.imdb_id
+	if (first.type === 'series') {
+		q.season = definition.season || 1
+		q.episode = definition.episode || 1
+	}
 
 	stremio.stream.find({ query: q }, function(err, streams) {
 		if (err) dieWithErr(err)

@@ -18,8 +18,11 @@ module.exports = function(args) {
 		definition.name = name.join(' ')
 	}
 
-	definition.inApp = argv.inApp
+	if (argv.season) definition.season = argv.season
+	if (argv.episode) definition.episode = argv.episode
 
+	definition.inApp = argv.inApp
+	
 	return definition
 }
 
