@@ -18,7 +18,9 @@ function playStream(stream)
 
 function launchPlayer(url) 
 {
-	child.spawn('/usr/bin/mpv',[url, '--fullscreen', '--force-window=immediate'])
+	var p = child.spawn('/usr/bin/mpv',[url, '--fullscreen', '--force-window=immediate', '--msg-level=all=v'], {
+		stdio: 'inherit'
+	})
 }
 
 module.exports = playStream
