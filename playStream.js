@@ -3,14 +3,14 @@ var open = require('open')
 
 function playStream(stream)
 {
+//	stream.prepare(function(err, vid) {
+//		console.log(stream, vid)
+//	})
 	// XXX: use stremio-models .prepare
 	if (stream.url) launchPlayer(stream.url)
 	if (stream.externalUrl) open(stream.externalUrl)
 	if (stream.infoHash) {
-		var idx = 0
-		if (typeof(stream.mapIdx)==='number') idx = stream.mapIdx
-		if (typeof(stream.fileIdx)==='number') idx = stream.fileIdx
-		var url = 'http://127.0.0.1:11470/'+stream.infoHash+'/'+idx
+		var url = 'http://127.0.0.1:11470/'+stream.infoHash+'/'+stream.fileIdx
 	
 		launchPlayer(url)
 	}

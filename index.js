@@ -10,6 +10,8 @@ var stremio = new addons.Client()
 var playStream = require('./playStream')
 var open = require('open')
 
+var Stream = require('/home/ivo/stremio-models/stream.js')(stremio)
+
 // Enable add-ons
 var add = function(x) { stremio.add(x) }
 config.addons.core.forEach(add)
@@ -66,6 +68,6 @@ searchForMeta(definition, function(err, meta) {
 		
 		if (! streams[0]) dieWithErr('no stream found')
 
-		playStream(streams[0])
+		playStream(new Stream(streams[0]))
 	})
 })
