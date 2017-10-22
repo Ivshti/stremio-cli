@@ -1,6 +1,8 @@
 var child = require('child_process')
 var open = require('open')
 
+const config = require('./stremio-conf')
+
 function playStream(stream)
 {
 	// XXX: use stremio-models .prepare
@@ -18,7 +20,7 @@ function playStream(stream)
 
 function launchPlayer(url) 
 {
-	var p = child.spawn('/usr/bin/mpv',[url, '--fullscreen', '--force-window=immediate', '--msg-level=all=v'], {
+	var p = child.spawn('/usr/bin/mpv',[url].concat(config.mpvOpts), {
 		stdio: 'inherit'
 	})
 }

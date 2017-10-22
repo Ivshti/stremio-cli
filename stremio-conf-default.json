@@ -10,5 +10,6 @@
 	"server": {
 		"defaultPort": 11470
 	},
-	"playerCmd": "mpv"
+	"playerCmd": "mpv",
+	"mpvOpts": ["--fullscreen", "--force-window=immediate", "--msg-level=all=v"]
 }
